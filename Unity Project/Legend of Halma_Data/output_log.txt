@@ -12,15 +12,15 @@ Platform assembly: C:\Users\Pico\Documents\GitHub\Halma-Game-UI\Unity Project\Le
 Loading C:\Users\Pico\Documents\GitHub\Halma-Game-UI\Unity Project\Legend of Halma_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
 Platform assembly: C:\Users\Pico\Documents\GitHub\Halma-Game-UI\Unity Project\Legend of Halma_Data\Managed\Assembly-UnityScript.dll (this message is harmless)
 Loading C:\Users\Pico\Documents\GitHub\Halma-Game-UI\Unity Project\Legend of Halma_Data\Managed\Assembly-UnityScript.dll into Unity Child Domain
-- Completed reload, in  0.304 seconds
+- Completed reload, in  0.370 seconds
 <RI> Initializing input.
 <RI> Input initialized.
 desktop: 1920x1080 59Hz; virtual: 1920x1080 at 0,0
 Platform assembly: C:\Users\Pico\Documents\GitHub\Halma-Game-UI\Unity Project\Legend of Halma_Data\Managed\System.dll (this message is harmless)
 Platform assembly: C:\Users\Pico\Documents\GitHub\Halma-Game-UI\Unity Project\Legend of Halma_Data\Managed\System.Core.dll (this message is harmless)
-UnloadTime: 0.669704 ms
+UnloadTime: 0.848891 ms
 Unloading 3 Unused Serialized files (Serialized files now loaded: 0 / Dirty serialized files: 0)
 
-Unloading 10 unused Assets to reduce memory usage. Loaded Objects now: 161.
-Total: 9.998528 ms (FindLiveObjects: 0.019672 ms CreateObjectMapping: 0.021382 ms MarkObjects: 0.157376 ms  DeleteObjects: 8.379861 ms)
+Unloading 10 unused Assets to reduce memory usage. Loaded Objects now: 171.
+Total: 12.513128 ms (FindLiveObjects: 0.042765 ms CreateObjectMapping: 0.022665 ms MarkObjects: 0.170205 ms  DeleteObjects: 10.922258 ms)
 
