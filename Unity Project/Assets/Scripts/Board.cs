@@ -14,7 +14,7 @@ public class Board : MonoBehaviour {
 		int j = 0;
 		for(var x = 0; x < size; x++){
 			for(var y = 0; y < size; y++){
-				squares[i, j] = Instantiate (tile, new Vector3(x+0f, y-0.75f, 0f), Quaternion.identity) as Transform;
+				squares[i, j] = Instantiate (tile, new Vector3(x - 8.5f, y - 7f, 0f), Quaternion.identity) as Transform;
 				j++;
 			}
 			i++;
