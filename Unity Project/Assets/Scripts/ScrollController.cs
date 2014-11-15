@@ -12,8 +12,8 @@ public class ScrollController : MonoBehaviour {
 	void Start () {
 		backgroundWidth = (float)background.renderer.bounds.size.x;
 		halfBackgroundWidth = backgroundWidth / 2.0f;
-		leadBackground = Instantiate (background, new Vector3(0f, 0f, 0f), Quaternion.identity) as Transform;
-		followBackground = Instantiate (background, new Vector3(backgroundWidth, 0f, 0f), Quaternion.identity) as Transform;
+		leadBackground = Instantiate (background, new Vector3(0f, 0f, 1.0f), Quaternion.identity) as Transform;
+		followBackground = Instantiate (background, new Vector3(backgroundWidth, 0f, 1.0f), Quaternion.identity) as Transform;
 	}
 	
 	// Update is called once per frame
