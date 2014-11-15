@@ -1,4 +1,4 @@
-Halma-Game-UI
+The Legend of Halma
 =============
 
 Coyle Extravaganza 2014
