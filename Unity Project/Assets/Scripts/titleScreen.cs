@@ -12,6 +12,6 @@ public class titleScreen : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		if(Input.GetKeyDown(KeyCode.KeypadEnter) || Input.GetKeyDown (KeyCode.Space))
-			Application.LoadLevel ("PicoTest");
+			Application.LoadLevel ("RebeccaScene");
 	}
 }
