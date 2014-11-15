@@ -6,34 +6,38 @@ public class Board : MonoBehaviour {
 	public Transform tile;
 	public Transform square;
 	public bool floatup;
-	public int boundUp;
-	public int boundDown;
+	public float boundUp;
+	public float boundDown;
+	public float stepSize = 0.1f;
 
 	// Use this for initialization
 	void Start () {
 		floatup = false;
 		square = Instantiate (tile, new Vector3 (0f, 0f, 0f), Quaternion.identity) as Transform;
-		boundUp = 2;
-		boundDown = -2;
+		boundUp = 2f;
+		boundDown = -2f;
 	}
 	
 	// Update is called once per frame
 	void Update () {
-		var pos = square.position.y;
-		if (boundUp < pos && floatup)
+		if (floatup)
 			floatingup ();
-		else if (boundDown < pos && !floatup) 
+		else if (!floatup) 
 			floatingdown();
 	}
 
 	void floatingup() {
-		square.position += new Vector3(0f, 0.3f, 0f);
-		floatup = false;
+		var pos = square.position.y;
+		square.position += new Vector3(0f, stepSize, 0f);
+		if(pos > boundUp)
+			floatup = false;
 	}
 
 	void floatingdown() {
-		square.position -= new Vector3(0f, 0.3f, 0f);
-		floatup = true;
+		var pos = square.position.y;
+		square.position -= new Vector3(0f, stepSize, 0f);
+		if(pos < boundDown)
+			floatup = true;
 	}
 
 
