@@ -10,7 +10,7 @@ public class Board : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		var size = 18;
+		int size = 18;
 		int i = 0;
 		int j = 0;
 		float desiredScale = 3.0f;
@@ -21,9 +21,10 @@ public class Board : MonoBehaviour {
 		boxCollider.size = new Vector2(colliderBound, colliderBound);
 		//squareOne = Instantiate (tile, new Vector3(0.0f, 0.0f, 0.0f), Quaternion.identity) as Transform;
 		//squareTwo = Instantiate (tile, new Vector3(1.0f*tileWidth, 1.0f*tileHeight, 1.0f*desiredScale), Quaternion.identity) as Transform;
-		for(var x = 0.0f; x < size; x++){
-			for(var y = 0.0f; y < size; y++){
-				squares[i, j] = Instantiate (tile, new Vector3(x*tileWidth*desiredScale, y*tileHeight*desiredScale, 0f), Quaternion.identity) as Transform;
+		float bottomLeft = size*tileWidth*desiredScale / -2.0f;
+		for(int x = 0; x < size; x++){
+			for(int y = 0; y < size; y++){
+				squares[i, j] = Instantiate (tile, new Vector3(x*tileWidth*desiredScale + bottomLeft, y*tileHeight*desiredScale + bottomLeft, 0f), Quaternion.identity) as Transform;
 				//squares[i, j] = Instantiate (tile, new Vector3(x*tileWidth, y*tileHeight, 0f), Quaternion.identity) as Transform;
 				//squares[i, j] = Instantiate (tile, new Vector3(x, y, 0f), Quaternion.identity) as Transform;
 				j++;
