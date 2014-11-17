@@ -2,12 +2,10 @@
 using System.Collections;
 
 public class backgroundScroll : MonoBehaviour {
-
-	private float halfLength;
+	
 	public float scrollSpeed = 0.005f;
 	// Use this for initialization
 	void Start () {
-		halfLength = (float)this.renderer.bounds.size.x / 2.0f;
 	}
 	
 	// Update is called once per frame
