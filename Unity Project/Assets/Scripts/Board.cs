@@ -4,10 +4,11 @@ using System.Collections;
 public class Board : MonoBehaviour
 {
 		public Transform tile;
-		public Transform[,] squares = new Transform[18, 18];
-		int size = 18;
-		float tileScale = 3.0f;
+		public int size = 18;
+		public float tileScale = 3.0f;
 
+		Transform[,] squares;
+		
 		// Use this for initialization
 		void Start ()
 		{
@@ -15,6 +16,7 @@ public class Board : MonoBehaviour
 			float tileWidth = (float)tile.renderer.bounds.size.x;
 			float colliderBound = 0.25f;
 			BoxCollider2D boxCollider = tile.collider2D as BoxCollider2D;
+			squares = new Transform[size, size];
 
 			float scaleFactor = tileWidth * tileScale;
 			boxCollider.size = new Vector2 (colliderBound, colliderBound);
