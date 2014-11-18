@@ -18,13 +18,13 @@ public class ScrollController : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		if (leadBackground.position.x + (halfBackgroundWidth) < -7.0f)
-		{
-			leadBackground.position += new Vector3 (halfBackgroundWidth * 4.0f, 0f, 0f);
-		}
-		else if (followBackground.position.x + (halfBackgroundWidth) < -7.0f)
+		if (followBackground.position.x + (halfBackgroundWidth) < -7.0f)
 		{
 			followBackground.position += new Vector3 (halfBackgroundWidth * 4.0f, 0f, 0f);
+		}
+		else if (leadBackground.position.x + (halfBackgroundWidth) < -7.0f)
+		{
+			leadBackground.position += new Vector3 (halfBackgroundWidth * 4.0f, 0f, 0f);
 		}
 	}
 }

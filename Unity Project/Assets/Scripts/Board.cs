@@ -20,7 +20,8 @@ public class Board : MonoBehaviour
 
 			float scaleFactor = tileWidth * tileScale;
 			boxCollider.size = new Vector2 (colliderBound, colliderBound);
-			float gridOffset = (size * scaleFactor) / -2.0f;
+			//Offset each tile's location by 1/2 the size of the board plus an additional amount to center the board.
+			float gridOffset = ((size * scaleFactor) / -2.0f) + (scaleFactor / 2.0f);
 			
 			for (int x = 0; x < size; x++) 
 			{
