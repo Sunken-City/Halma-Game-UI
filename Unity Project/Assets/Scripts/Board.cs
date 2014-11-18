@@ -14,7 +14,7 @@ public class Board : MonoBehaviour
 		{
 			//Declare and Initialize some constants we're going to use.
 			float tileWidth = (float)tile.renderer.bounds.size.x;
-			float colliderBound = 0.25f;
+			float colliderBound = tileWidth;
 			BoxCollider2D boxCollider = tile.collider2D as BoxCollider2D;
 			squares = new Transform[size, size];
 
