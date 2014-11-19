@@ -3,6 +3,60 @@ guid: f4f064fdf1fe03149b3b30d238f64421
 TextureImporter:
   fileIDToRecycleName:
     21300000: Spirit Medallions
+    21300002: Spirit Medallions_0
+    21300004: Spirit Medallions_1
+    21300006: Spirit Medallions_2
+    21300008: Spirit Medallions_3
+    21300010: Spirit Medallions_4
+    21300012: Spirit Medallions_5
+    21300014: Spirit Medallions_6
+    21300016: Spirit Medallions_7
+    21300018: Spirit Medallions_8
+    21300020: Spirit Medallions_9
+    21300022: Spirit Medallions_10
+    21300024: Spirit Medallions_11
+    21300026: Spirit Medallions_12
+    21300028: Spirit Medallions_13
+    21300030: Spirit Medallions_14
+    21300032: Spirit Medallions_15
+    21300034: Spirit Medallions_16
+    21300036: Spirit Medallions_17
+    21300038: Spirit Medallions_18
+    21300040: Spirit Medallions_19
+    21300042: Spirit Medallions_20
+    21300044: Spirit Medallions_21
+    21300046: Spirit Medallions_22
+    21300048: Spirit Medallions_23
+    21300050: Spirit Medallions_24
+    21300052: Spirit Medallions_25
+    21300054: Spirit Medallions_26
+    21300056: Spirit Medallions_27
+    21300058: Spirit Medallions_28
+    21300060: Spirit Medallions_29
+    21300062: Spirit Medallions_30
+    21300064: Spirit Medallions_31
+    21300066: Spirit Medallions_32
+    21300068: Spirit Medallions_33
+    21300070: Spirit Medallions_34
+    21300072: Spirit Medallions_35
+    21300074: Spirit Medallions_36
+    21300076: Spirit Medallions_37
+    21300078: Spirit Medallions_38
+    21300080: Spirit Medallions_39
+    21300082: Spirit Medallions_40
+    21300084: Spirit Medallions_41
+    21300086: Spirit Medallions_42
+    21300088: Spirit Medallions_43
+    21300090: Spirit Medallions_44
+    21300092: Spirit Medallions_45
+    21300094: Spirit Medallions_46
+    21300096: Spirit Medallions_47
+    21300098: Spirit Medallions_48
+    21300100: Spirit Medallions_49
+    21300102: Spirit Medallions_50
+    21300104: Spirit Medallions_51
+    21300106: Spirit Medallions_52
+    21300108: Spirit Medallions_53
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -25,14 +79,14 @@ TextureImporter:
   textureFormat: -1
   maxTextureSize: 1024
   textureSettings:
-    filterMode: -1
-    aniso: -1
+    filterMode: 0
+    aniso: 1
     mipBias: -1
-    wrapMode: -1
+    wrapMode: 1
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -43,6 +97,546 @@ TextureImporter:
   textureType: 8
   buildTargetSettings: []
   spriteSheet:
-    sprites: []
+    sprites:
+    - name: Spirit Medallions_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 516
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Spirit Medallions_1
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 494
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Spirit Medallions_2
+      rect:
+        serializedVersion: 2
+        x: 22
+        y: 494
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Spirit Medallions_3
+      rect:
+        serializedVersion: 2
+        x: 44
+        y: 494
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Spirit Medallions_4
+      rect:
+        serializedVersion: 2
+        x: 22
+        y: 516
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Spirit Medallions_5
+      rect:
+        serializedVersion: 2
+        x: 66
+        y: 494
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Spirit Medallions_6
+      rect:
+        serializedVersion: 2
+        x: 88
+        y: 494
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Spirit Medallions_7
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 472
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Spirit Medallions_8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 538
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Spirit Medallions_9
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 450
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Spirit Medallions_10
+      rect:
+        serializedVersion: 2
+        x: 22
+        y: 450
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Spirit Medallions_11
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 428
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Spirit Medallions_12
+      rect:
+        serializedVersion: 2
+        x: 22
+        y: 428
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Spirit Medallions_13
+      rect:
+        serializedVersion: 2
+        x: 44
+        y: 428
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Spirit Medallions_14
+      rect:
+        serializedVersion: 2
+        x: 66
+        y: 428
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Spirit Medallions_15
+      rect:
+        serializedVersion: 2
+        x: 88
+        y: 428
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Spirit Medallions_16
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 406
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Spirit Medallions_17
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 384
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Spirit Medallions_18
+      rect:
+        serializedVersion: 2
+        x: 22
+        y: 384
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Spirit Medallions_19
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 362
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Spirit Medallions_20
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 340
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Spirit Medallions_21
+      rect:
+        serializedVersion: 2
+        x: 22
+        y: 362
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Spirit Medallions_22
+      rect:
+        serializedVersion: 2
+        x: 44
+        y: 362
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Spirit Medallions_23
+      rect:
+        serializedVersion: 2
+        x: 66
+        y: 362
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Spirit Medallions_24
+      rect:
+        serializedVersion: 2
+        x: 88
+        y: 362
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Spirit Medallions_25
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 318
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Spirit Medallions_26
+      rect:
+        serializedVersion: 2
+        x: 22
+        y: 318
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Spirit Medallions_27
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 296
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Spirit Medallions_28
+      rect:
+        serializedVersion: 2
+        x: 22
+        y: 296
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Spirit Medallions_29
+      rect:
+        serializedVersion: 2
+        x: 44
+        y: 296
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Spirit Medallions_30
+      rect:
+        serializedVersion: 2
+        x: 66
+        y: 296
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Spirit Medallions_31
+      rect:
+        serializedVersion: 2
+        x: 88
+        y: 296
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Spirit Medallions_32
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 274
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Spirit Medallions_33
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 252
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Spirit Medallions_34
+      rect:
+        serializedVersion: 2
+        x: 22
+        y: 252
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Spirit Medallions_35
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 230
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Spirit Medallions_36
+      rect:
+        serializedVersion: 2
+        x: 22
+        y: 230
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Spirit Medallions_37
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 208
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Spirit Medallions_38
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 186
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Spirit Medallions_39
+      rect:
+        serializedVersion: 2
+        x: 22
+        y: 186
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Spirit Medallions_40
+      rect:
+        serializedVersion: 2
+        x: 44
+        y: 230
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Spirit Medallions_41
+      rect:
+        serializedVersion: 2
+        x: 66
+        y: 230
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Spirit Medallions_42
+      rect:
+        serializedVersion: 2
+        x: 88
+        y: 230
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Spirit Medallions_43
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 164
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Spirit Medallions_44
+      rect:
+        serializedVersion: 2
+        x: 22
+        y: 164
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Spirit Medallions_45
+      rect:
+        serializedVersion: 2
+        x: 44
+        y: 164
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Spirit Medallions_46
+      rect:
+        serializedVersion: 2
+        x: 66
+        y: 164
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Spirit Medallions_47
+      rect:
+        serializedVersion: 2
+        x: 88
+        y: 164
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Spirit Medallions_48
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 85
+        width: 17
+        height: 17
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Spirit Medallions_49
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 68
+        width: 17
+        height: 17
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Spirit Medallions_50
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 51
+        width: 17
+        height: 17
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Spirit Medallions_51
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 34
+        width: 17
+        height: 17
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Spirit Medallions_52
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 17
+        width: 17
+        height: 17
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Spirit Medallions_53
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 17
+        height: 17
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
   spritePackingTag: 
   userData: 
