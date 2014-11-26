@@ -3,8 +3,8 @@ using System.Collections;
 
 public class Piece : MonoBehaviour {
 
-	public int x, y;
-	public int initX, initY;
+	public float x, y;
+	public float initX, initY;
 	public float size;
 	public float tileLength;
 	//also will need a Sprite attribute
@@ -21,14 +21,20 @@ public class Piece : MonoBehaviour {
 	}
 	
 	void Initialize(Vector2 desiredPlace, Vector3 realCoors, float tileLength){
-		x = desiredPlace.x;
-		y = desiredPlace.y;
+		this.x = desiredPlace.x;
+		this.y = desiredPlace.y;
 
-		initX = realCoors.x;
-		initY = realCoors.y;
+		this.initX = realCoors.x;
+		this.initY = realCoors.y;
 
+		this.tileLength = tileLength;
 
+		this.transform.position.x = calcPos(initX, x, tileLength); 
+		this.transform.position.y = calcPos(initY, y, tileLength);
+	}
 
+	float calcPos(float init, float desired, float leng){
+		return init + (desired*leng);
 	}
 	
 }
