@@ -12,11 +12,11 @@ public class Player : MonoBehaviour {
 	}
 
 	// Use this to pass parameters to the player entity
-	public void Initialize(ArrayList startingLocations) {
+	public void Initialize(ArrayList startingLocations, Vector3 originTileLocation, float tileLength) {
 		pieces = new ArrayList ();
 		foreach (Vector2 location in startingLocations) {
 			Transform piece = Instantiate(Piece, new Vector3 (0f, 0f, 0f), Quaternion.identity) as Transform; 
-			piece.GetComponent<Piece>().Initialize(location, originLocation, 1.0f);
+			piece.GetComponent<Piece>().Initialize(location, originTileLocation, tileLength);
 			pieces.Add(piece);
 		}
 	}
