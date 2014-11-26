@@ -20,7 +20,7 @@ public class Piece : MonoBehaviour {
 	
 	}
 	
-	void Initialize(Vector2 desiredPlace, Vector3 realCoors, float tileLength){
+	public void Initialize(Vector2 desiredPlace, Vector3 realCoors, float tileLength){
 		this.x = desiredPlace.x;
 		this.y = desiredPlace.y;
 		this.z = realCoors.z - 1;
