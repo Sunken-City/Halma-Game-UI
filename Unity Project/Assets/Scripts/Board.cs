@@ -4,7 +4,6 @@ using System.Collections;
 public class Board : MonoBehaviour
 {
 		public Transform tile;
-		public Transform piece;
 		public int size = 18;
 		public float tileScale = 3.3f;
 		private float scaleFactor;
