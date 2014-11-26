@@ -4,6 +4,7 @@ using System.Collections;
 public class Board : MonoBehaviour
 {
 		public Transform tile;
+		public Transform piece;
 		public int size = 18;
 		public float tileScale = 3.0f;
 
@@ -37,6 +38,11 @@ public class Board : MonoBehaviour
 			for (int x = 0; x < size; x++)
 					for (int y = 0; y < size; y++)
 							squares [x, y].transform.localScale = new Vector3 (1f * tileScale, 1f * tileScale, 0f);
+		
+			//piece = Instantiate (piece, 
+		                     	 //new Vector3 (squares[4,4].transform.position.x,squares[4,4].transform.position.y, -4f),
+		                     	 //Quaternion.identity) as Transform;
+
 		}
 	
 		// Update is called once per frame
