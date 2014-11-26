@@ -29,11 +29,17 @@ public class Piece : MonoBehaviour {
 
 		this.tileLength = tileLength;
 
+		this.transform.localScale = new Vector3 (1f*calcSize(tileLength), 1f*calcSize(tileLength), 1f);
+
 		this.transform.position = new Vector3(calcPos(initX, x, tileLength), calcPos(initY, y, tileLength), realCoors.z - 1);
 	}
 
 	float calcPos(float init, float desired, float leng){
 		return init + (desired*leng);
+	}
+
+	float calcSize(float leng){
+		return leng * (7 / 8); 
 	}
 	
 }
