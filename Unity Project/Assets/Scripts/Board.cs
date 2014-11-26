@@ -6,9 +6,10 @@ public class Board : MonoBehaviour
 		public Transform tile;
 		public int size = 18;
 		public float tileScale = 3.3f;
-		private float scaleFactor;
-		private Vector3 originTilePosition;
+		private float scaleFactor = 3.3f;
+		private Vector3 originTilePosition = Vector3.zero;
 		Transform[,] squares;
+
 		
 	public bool isStartDone = false;
 		// Use this for initialization
@@ -39,7 +40,7 @@ public class Board : MonoBehaviour
 			for (int x = 0; x < size; x++)
 					for (int y = 0; y < size; y++)
 							squares [x, y].transform.localScale = new Vector3 (1f * tileScale, 1f * tileScale, 0f);
-			originTilePosition = squares [0, 0].position;
+			originTilePosition = squares [0, 0].transform.position;
 		}
 
 		public int getSize()
