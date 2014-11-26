@@ -3,7 +3,7 @@ using System.Collections;
 
 public class Piece : MonoBehaviour {
 
-	public float x, y;
+	public float x, y, z;
 	public float initX, initY;
 	public float size;
 	public float tileLength;
@@ -23,6 +23,7 @@ public class Piece : MonoBehaviour {
 	void Initialize(Vector2 desiredPlace, Vector3 realCoors, float tileLength){
 		this.x = desiredPlace.x;
 		this.y = desiredPlace.y;
+		this.z = realCoors.z - 1;
 
 		this.initX = realCoors.x;
 		this.initY = realCoors.y;
@@ -31,7 +32,7 @@ public class Piece : MonoBehaviour {
 
 		this.transform.localScale = new Vector3 (1f*calcSize(tileLength), 1f*calcSize(tileLength), 1f);
 
-		this.transform.position = new Vector3(calcPos(initX, x, tileLength), calcPos(initY, y, tileLength), realCoors.z - 1);
+		this.transform.position = new Vector3(calcPos(initX, x, tileLength), calcPos(initY, y, tileLength), this.z);
 	}
 
 	float calcPos(float init, float desired, float leng){
@@ -40,6 +41,13 @@ public class Piece : MonoBehaviour {
 
 	float calcSize(float leng){
 		return leng * (7 / 8); 
+	}
+
+	void move(Vector2 desiredPlace){
+		x = desiredPlace.x;
+		y = desiredPlace.y;
+
+		this.transform.position = new Vector3(calcPos(initX, x, tileLength), calcPos(initY, y, tileLength), z);		
 	}
 	
 }
