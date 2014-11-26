@@ -29,8 +29,7 @@ public class Piece : MonoBehaviour {
 
 		this.tileLength = tileLength;
 
-		this.transform.position.x = calcPos(initX, x, tileLength); 
-		this.transform.position.y = calcPos(initY, y, tileLength);
+		this.transform.position = new Vector3(calcPos(initX, x, tileLength), calcPos(initY, y, tileLength), realCoors.z - 1);
 	}
 
 	float calcPos(float init, float desired, float leng){
