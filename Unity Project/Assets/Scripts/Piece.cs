@@ -30,6 +30,7 @@ public class Piece : MonoBehaviour {
 
 		this.tileLength = tileLength;
 
+
 		this.transform.localScale = new Vector3 (1f*calcSize(tileLength), 1f*calcSize(tileLength), 1f);
 
 		this.transform.position = new Vector3(calcPos(initX, x, tileLength), calcPos(initY, y, tileLength), this.z);
@@ -40,7 +41,7 @@ public class Piece : MonoBehaviour {
 	}
 
 	float calcSize(float leng){
-		return leng * (7 / 8); 
+		return leng * (7f / 8f); 
 	}
 
 	void move(Vector2 desiredPlace){
