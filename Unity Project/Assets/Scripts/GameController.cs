@@ -16,8 +16,10 @@ public class GameController : MonoBehaviour
 		{
 				InitializeStartingPositions ();
 				board = Instantiate (Board, Vector3.zero, Quaternion.identity) as Transform;
-				float tileLength = board.GetComponent<Board> ().getTileLength ();
-				Vector3 originTileLocation = board.GetComponent<Board> ().getOriginTile ();
+				var boardScript = board.GetComponent<Board> ();
+				boardScript.Start();
+				float tileLength = boardScript.getTileLength ();
+				Vector3 originTileLocation = boardScript.getOriginTile ();
 				player1 = Instantiate (Player1, Vector3.zero, Quaternion.identity) as Transform; 
 				player1.GetComponent<Player> ().Initialize (player1Start, originTileLocation, tileLength);
 		}

@@ -13,7 +13,7 @@ public class Board : MonoBehaviour
 		
 	public bool isStartDone = false;
 		// Use this for initialization
-		void Start ()
+		public void Start ()
 		{
 			//Declare and Initialize some constants we're going to use.
 			float tileWidth = (float)tile.renderer.bounds.size.x;
