@@ -6,10 +6,12 @@ public class Board : MonoBehaviour
 		public Transform tile;
 		public Transform piece;
 		public int size = 18;
-		public float tileScale = 3.0f;
-
+		public float tileScale = 3.3f;
+		private float scaleFactor;
+		private Vector3 originTilePosition;
 		Transform[,] squares;
 		
+	public bool isStartDone = false;
 		// Use this for initialization
 		void Start ()
 		{
@@ -19,7 +21,7 @@ public class Board : MonoBehaviour
 			BoxCollider2D boxCollider = tile.collider2D as BoxCollider2D;
 			squares = new Transform[size, size];
 
-			float scaleFactor = tileWidth * tileScale;
+			scaleFactor = tileWidth * tileScale;
 			boxCollider.size = new Vector2 (colliderBound, colliderBound);
 			//Offset each tile's location by 1/2 the size of the board plus an additional amount to center the board.
 			float gridOffset = ((size * scaleFactor) / -2.0f) + (scaleFactor / 2.0f);
@@ -38,9 +40,24 @@ public class Board : MonoBehaviour
 			for (int x = 0; x < size; x++)
 					for (int y = 0; y < size; y++)
 							squares [x, y].transform.localScale = new Vector3 (1f * tileScale, 1f * tileScale, 0f);
-
+			originTilePosition = squares [0, 0].position;
 		}
-	
+
+		public int getSize()
+		{
+			return size;
+		}
+			
+		public float getTileLength()
+		{
+			return scaleFactor;
+		}
+		
+		public Vector3 getOriginTile()
+		{
+			return originTilePosition;
+		}
+		
 		// Update is called once per frame
 		void Update ()
 		{
