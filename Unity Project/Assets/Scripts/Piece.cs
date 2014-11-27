@@ -5,13 +5,13 @@ public class Piece : MonoBehaviour {
 
 	float size;
 	float tileLength;
+	float colliderSize;
 	Vector3 originPosition;
 	//also will need a Sprite attribute
 	//to change the style
 
 	// Use this for initialization
 	void Start () {
-
 	}
 	
 	// Update is called once per frame
@@ -30,9 +30,9 @@ public class Piece : MonoBehaviour {
 		return new Vector3(originPosition.x + (boardPosition.x * tileLength), originPosition.y - (boardPosition.y * tileLength), -1f);
 	}
 
-	float calcSize(float leng){
-		//return (leng * (7f / 8f))*3.3; 
-		return 2;
+	float calcSize(float tileLength){
+		return (float)tileLength / (float)this.renderer.bounds.size.x;
+		//return 2;
 	}
 
 	void move(Vector2 placeToMove){
