@@ -40,7 +40,7 @@ public class Player : MonoBehaviour {
 	}
 
 	bool pieceExists(Vector2 piece){
-		float x = piece.x;
+		/*float x = piece.x;
 		float y = piece.y;
 		ArrayList subSetPiecesX = new ArrayList(pieces.Cast<Piece>()
 		                                     .Where(p => p.x == x)
@@ -53,7 +53,7 @@ public class Player : MonoBehaviour {
 				return true;
 			}
 		}
-
+*/
 		return false;
 	}
 }
