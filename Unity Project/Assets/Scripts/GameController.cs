@@ -33,6 +33,7 @@ public class GameController : MonoBehaviour
 		void InitializeStartingPositions ()
 		{
 				player1Start = new ArrayList ();
+				player1Start.Add (new Vector2 (0, 0));
 				player1Start.Add (new Vector2 (0, 15));
 				player1Start.Add (new Vector2 (1, 15));
 				player1Start.Add (new Vector2 (2, 15));

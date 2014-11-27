@@ -3,10 +3,10 @@ using System.Collections;
 
 public class Piece : MonoBehaviour {
 
-	public float x, y, z;
-	public float initX, initY;
-	public float size;
-	public float tileLength;
+	float x, y, z;
+	float initX, initY;
+	float size;
+	float tileLength;
 	//also will need a Sprite attribute
 	//to change the style
 
@@ -20,28 +20,17 @@ public class Piece : MonoBehaviour {
 	
 	}
 	
-	public void Initialize(Vector2 startingLocations, Vector3 originTileLocation, float tileLength){
-		this.x = startingLocations.x;
-		this.y = startingLocations.y;
-		this.z = originTileLocation.z - 1;
-
-		this.initX = originTileLocation.x;
-		this.initY = originTileLocation.y;
-
+	public void Initialize(Vector2 boardLocation, Vector3 originTileLocation, float tileLength){
 		this.tileLength = tileLength;
-
-
-		this.transform.localScale = new Vector3 (1f*calcSize(tileLength), 1f*calcSize(tileLength), 1f);
-
-		this.transform.position = new Vector3(calcPos(initX, x, tileLength), calcPos(initY, y, tileLength), this.z);
+		this.transform.localScale = new Vector3 (1f * calcSize(tileLength), 1f * calcSize(tileLength), 1f);
+		this.transform.position = new Vector3(calcPos(originTileLocation.x, boardLocation.x, tileLength), calcPos(originTileLocation.y, boardLocation.y, tileLength), -1f);
 	}
 
-	float calcPos(float init, float desired, float leng){
-		return init + (desired*leng);
+	float calcPos(float originPosition, float boardPosition, float tileLength){
+		return originPosition + (boardPosition * tileLength);
 	}
 
-	float calcSize(float leng){
-		//return leng * (7f / 8f); 
+	float calcSize(float tileLength){
 		return 2;
 	}
 
