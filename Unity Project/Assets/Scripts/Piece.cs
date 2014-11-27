@@ -41,7 +41,7 @@ public class Piece : MonoBehaviour {
 	}
 
 	float calcSize(float leng){
-		//return leng * (7f / 8f); 
+		//return (leng * (7f / 8f))*3.3; 
 		return 2;
 	}
 
