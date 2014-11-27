@@ -20,13 +20,13 @@ public class Piece : MonoBehaviour {
 	
 	}
 	
-	public void Initialize(Vector2 desiredPlace, Vector3 realCoors, float tileLength){
-		this.x = desiredPlace.x;
-		this.y = desiredPlace.y;
-		this.z = realCoors.z - 1;
+	public void Initialize(Vector2 startingLocations, Vector3 originTileLocation, float tileLength){
+		this.x = startingLocations.x;
+		this.y = startingLocations.y;
+		this.z = originTileLocation.z - 1;
 
-		this.initX = realCoors.x;
-		this.initY = realCoors.y;
+		this.initX = originTileLocation.x;
+		this.initY = originTileLocation.y;
 
 		this.tileLength = tileLength;
 
@@ -41,7 +41,8 @@ public class Piece : MonoBehaviour {
 	}
 
 	float calcSize(float leng){
-		return leng * (7f / 8f); 
+		//return leng * (7f / 8f); 
+		return 2;
 	}
 
 	void move(Vector2 desiredPlace){
