@@ -6,6 +6,7 @@ public class Piece : MonoBehaviour {
 	float size;
 	float tileLength;
 	float colliderSize;
+	Vector2 boardPosition;
 	Vector3 originPosition;
 	//also will need a Sprite attribute
 	//to change the style
@@ -18,10 +19,16 @@ public class Piece : MonoBehaviour {
 	void Update () {
 	
 	}
+
+	public Vector2 getLocation()
+	{
+		return this.boardPosition;
+	}
 	
 	public void Initialize(Vector2 boardLocation, Vector3 originTileLocation, float tileLength){
 		this.tileLength = tileLength;
 		this.originPosition = originTileLocation;
+		this.boardPosition = boardLocation;
 		this.transform.localScale = new Vector3 (1f * calcSize(tileLength), 1f * calcSize(tileLength), 1f);
 		this.transform.position = calcPos(originTileLocation, boardLocation, tileLength);
 	}
