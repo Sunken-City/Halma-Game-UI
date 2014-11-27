@@ -37,7 +37,7 @@ public class Board : MonoBehaviour
 						for (int x = 0; x < size; x++)
 								for (int y = 0; y < size; y++)
 										squares [x, y].transform.localScale = new Vector3 (1f * tileScale, 1f * tileScale, 0f);
-						originTilePosition = squares [0, 0].transform.position;
+						originTilePosition = squares [0, size - 1].transform.position;
 						isInitialized = true;
 				}
 		}
