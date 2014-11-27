@@ -27,7 +27,7 @@ public class Piece : MonoBehaviour {
 	}
 
 	float calcPos(float originPosition, float boardPosition, float tileLength){
-		return originPosition + (boardPosition * tileLength);
+		return originPosition - (boardPosition * tileLength);
 	}
 
 	float calcSize(float tileLength){
