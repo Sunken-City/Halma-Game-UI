@@ -26,7 +26,7 @@ public class Player : MonoBehaviour {
 	public void getMove(ArrayList enemyPieces) {
 		//Hector, now is your time to shine!
 		//Go ahead and use the collection of pieces in the arrayList pieces to make the request with.
-
+		
 
 		//Once you have the piece selected and the places it needs to go, you can pass them in here.
 	}
