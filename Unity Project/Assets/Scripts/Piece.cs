@@ -8,8 +8,8 @@ public class Piece : MonoBehaviour {
 	float colliderSize;
 	Vector2 boardPosition;
 	Vector3 originPosition;
-	//also will need a Sprite attribute
-	//to change the style
+	
+	public Sprite[] styles;
 
 	// Use this for initialization
 	void Start () {
