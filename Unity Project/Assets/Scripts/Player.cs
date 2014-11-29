@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System;
 
 public class Player : MonoBehaviour {
 
@@ -9,7 +10,7 @@ public class Player : MonoBehaviour {
 	private ArrayList destinations;
 	private ArrayList piecesX = new ArrayList();
 	private ArrayList piecesY = new ArrayList();
-	private string webServiceURL;
+	private string webServiceURL = "http://lyle.smu.edu/~tbgeorge/cse4345/a1/getMove.php";
 	
 	// Use this for initialization
 	void Start () {
@@ -62,13 +63,27 @@ public class Player : MonoBehaviour {
 	
 	public void getMove(ArrayList enemyPieces, ArrayList enemyDestinations) 
 	{
-		JSONObject httpRequest = new JSONObject(JSONObject.Type.OBJECT);
-		httpRequest.AddField("boardsize", 18);
-		httpRequest.AddField("pieces", pieceListToJSON(pieces));
-		httpRequest.AddField("destinations", arrayListToJSON(destinations));
-		httpRequest.AddField("enemy", pieceListToJSON(enemyPieces));
-		httpRequest.AddField("enemydestinations", arrayListToJSON(enemyDestinations));
+		JSONObject httpRequestJSON = new JSONObject(JSONObject.Type.OBJECT);
+		httpRequestJSON.AddField("boardsize", 18);
+		httpRequestJSON.AddField("pieces", pieceListToJSON(pieces));
+		httpRequestJSON.AddField("destinations", arrayListToJSON(destinations));
+		httpRequestJSON.AddField("enemy", pieceListToJSON(enemyPieces));
+		httpRequestJSON.AddField("enemydestinations", arrayListToJSON(enemyDestinations));
 		
+		WWWForm postData = new WWWForm();
+		postData.AddField("board", httpRequestJSON.print());
+		
+		sendWebRequest(postData);
+	}
+	
+	IEnumerator sendWebRequest(WWWForm postData)
+	{
+		WWW webRequest = new WWW(webServiceURL, postData);
+		yield return webRequest;
+		if (!String.IsNullOrEmpty(webRequest.error))
+			Debug.Log(webRequest.error);
+		else
+			Debug.Log (webRequest.text);
 	}
 
 	public ArrayList getPieces() {
