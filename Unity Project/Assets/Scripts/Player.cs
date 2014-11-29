@@ -4,6 +4,7 @@ using System.Collections;
 public class Player : MonoBehaviour {
 
 	public Transform Piece;
+
 	private ArrayList pieces;
 	private ArrayList piecesX = new ArrayList();
 	private ArrayList piecesY = new ArrayList();
@@ -14,11 +15,25 @@ public class Player : MonoBehaviour {
 	// Use this to pass parameters to the player entity
 	public void Initialize(ArrayList startingLocations, Vector3 originTileLocation, float tileLength) {
 		pieces = new ArrayList();
+
 		foreach (Vector2 location in startingLocations) {
 			Transform piece = Instantiate(Piece, Vector3.zero, Quaternion.identity) as Transform; 
 			piece.GetComponent<Piece>().Initialize(location, originTileLocation, tileLength);
 			pieces.Add(piece);
 		}
+	}
+
+	public void getMove(ArrayList enemyPieces) {
+		//Hector, now is your time to shine!
+		//Go ahead and use the collection of pieces in the arrayList pieces to make the request with.
+		
+
+		//Once you have the piece selected and the places it needs to go, you can pass them in here.
+	}
+
+	public ArrayList getPieces()
+	{
+		return this.pieces;
 	}
 
 	// Update is called once per frame

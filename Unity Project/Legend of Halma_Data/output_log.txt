@@ -1,4 +1,4 @@
-Initialize engine version: 4.5.3f3 (fca41a4fabea)
+Initialize engine version: 4.6.0f3 (30840d631a27)
 GfxDevice: creating device client; threaded=1
 Direct3D:
     Version:  Direct3D 11.0 [level 11.0]
@@ -12,15 +12,27 @@ Platform assembly: C:\Users\Pico\Documents\GitHub\Halma-Game-UI\Unity Project\Le
 Loading C:\Users\Pico\Documents\GitHub\Halma-Game-UI\Unity Project\Legend of Halma_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
 Platform assembly: C:\Users\Pico\Documents\GitHub\Halma-Game-UI\Unity Project\Legend of Halma_Data\Managed\Assembly-UnityScript.dll (this message is harmless)
 Loading C:\Users\Pico\Documents\GitHub\Halma-Game-UI\Unity Project\Legend of Halma_Data\Managed\Assembly-UnityScript.dll into Unity Child Domain
-- Completed reload, in  0.370 seconds
+Platform assembly: C:\Users\Pico\Documents\GitHub\Halma-Game-UI\Unity Project\Legend of Halma_Data\Managed\UnityEngine.UI.dll (this message is harmless)
+Loading C:\Users\Pico\Documents\GitHub\Halma-Game-UI\Unity Project\Legend of Halma_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
+- Completed reload, in  0.336 seconds
 <RI> Initializing input.
 <RI> Input initialized.
 desktop: 1920x1080 59Hz; virtual: 1920x1080 at 0,0
-Platform assembly: C:\Users\Pico\Documents\GitHub\Halma-Game-UI\Unity Project\Legend of Halma_Data\Managed\System.dll (this message is harmless)
 Platform assembly: C:\Users\Pico\Documents\GitHub\Halma-Game-UI\Unity Project\Legend of Halma_Data\Managed\System.Core.dll (this message is harmless)
-UnloadTime: 0.848891 ms
+Platform assembly: C:\Users\Pico\Documents\GitHub\Halma-Game-UI\Unity Project\Legend of Halma_Data\Managed\System.dll (this message is harmless)
+UnloadTime: 0.966067 ms
 Unloading 3 Unused Serialized files (Serialized files now loaded: 0 / Dirty serialized files: 0)
 
-Unloading 10 unused Assets to reduce memory usage. Loaded Objects now: 171.
-Total: 12.513128 ms (FindLiveObjects: 0.042765 ms CreateObjectMapping: 0.022665 ms MarkObjects: 0.170205 ms  DeleteObjects: 10.922258 ms)
+Unloading 17 unused Assets to reduce memory usage. Loaded Objects now: 295.
+Total: 2.791289 ms (FindLiveObjects: 0.041482 ms CreateObjectMapping: 0.031646 ms MarkObjects: 0.496932 ms  DeleteObjects: 0.743260 ms)
+
+Paco the Taco
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+UnloadTime: 10.205076 ms
+Unloading 3 Unused Serialized files (Serialized files now loaded: 0 / Dirty serialized files: 0)
+
+Unloading 4 unused Assets to reduce memory usage. Loaded Objects now: 230.
+Total: 2.224221 ms (FindLiveObjects: 0.036350 ms CreateObjectMapping: 0.023093 ms MarkObjects: 0.303633 ms  DeleteObjects: 0.539270 ms)
 
