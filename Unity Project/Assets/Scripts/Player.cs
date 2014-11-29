@@ -31,8 +31,7 @@ public class Player : MonoBehaviour {
 		//Once you have the piece selected and the places it needs to go, you can pass them in here.
 	}
 
-	public ArrayList getPieces()
-	{
+	public ArrayList getPieces() {
 		return this.pieces;
 	}
 
