@@ -14,21 +14,21 @@ Platform assembly: C:\Users\Pico\Documents\GitHub\Halma-Game-UI\Unity Project\Le
 Loading C:\Users\Pico\Documents\GitHub\Halma-Game-UI\Unity Project\Legend of Halma_Data\Managed\Assembly-UnityScript.dll into Unity Child Domain
 Platform assembly: C:\Users\Pico\Documents\GitHub\Halma-Game-UI\Unity Project\Legend of Halma_Data\Managed\UnityEngine.UI.dll (this message is harmless)
 Loading C:\Users\Pico\Documents\GitHub\Halma-Game-UI\Unity Project\Legend of Halma_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
-- Completed reload, in  0.370 seconds
+- Completed reload, in  0.501 seconds
 <RI> Initializing input.
 <RI> Input initialized.
 desktop: 1920x1080 59Hz; virtual: 1920x1080 at 0,0
 Platform assembly: C:\Users\Pico\Documents\GitHub\Halma-Game-UI\Unity Project\Legend of Halma_Data\Managed\System.Core.dll (this message is harmless)
 Platform assembly: C:\Users\Pico\Documents\GitHub\Halma-Game-UI\Unity Project\Legend of Halma_Data\Managed\System.dll (this message is harmless)
-UnloadTime: 0.847180 ms
+UnloadTime: 0.924585 ms
 Unloading 4 Unused Serialized files (Serialized files now loaded: 0 / Dirty serialized files: 0)
 
 Unloading 17 unused Assets to reduce memory usage. Loaded Objects now: 499.
-Total: 3.226212 ms (FindLiveObjects: 0.067141 ms CreateObjectMapping: 0.035922 ms MarkObjects: 0.898498 ms  DeleteObjects: 0.739411 ms)
+Total: 3.173610 ms (FindLiveObjects: 0.067141 ms CreateObjectMapping: 0.035067 ms MarkObjects: 0.822376 ms  DeleteObjects: 0.755662 ms)
 
-UnloadTime: 17.448229 ms
+UnloadTime: 17.784794 ms
 Unloading 3 Unused Serialized files (Serialized files now loaded: 0 / Dirty serialized files: 0)
 
 Unloading 6 unused Assets to reduce memory usage. Loaded Objects now: 270.
-Total: 2.366630 ms (FindLiveObjects: 0.029935 ms CreateObjectMapping: 0.032073 ms MarkObjects: 0.378900 ms  DeleteObjects: 0.555520 ms)
+Total: 2.311035 ms (FindLiveObjects: 0.029935 ms CreateObjectMapping: 0.025659 ms MarkObjects: 0.382321 ms  DeleteObjects: 0.554665 ms)
 
