@@ -4,21 +4,22 @@ using System.Collections;
 public class Player : MonoBehaviour {
 
 	public Transform Piece;
-
+	
 	private ArrayList pieces;
 	private ArrayList piecesX = new ArrayList();
 	private ArrayList piecesY = new ArrayList();
 	// Use this for initialization
 	void Start () {
+		
 	}
 
 	// Use this to pass parameters to the player entity
-	public void Initialize(ArrayList startingLocations, Vector3 originTileLocation, float tileLength) {
+	public void Initialize(int pieceStyleNumber, ArrayList startingLocations, Vector3 originTileLocation, float tileLength) {
 		pieces = new ArrayList();
 
 		foreach (Vector2 location in startingLocations) {
 			Transform piece = Instantiate(Piece, Vector3.zero, Quaternion.identity) as Transform; 
-			piece.GetComponent<Piece>().Initialize(location, originTileLocation, tileLength);
+			piece.GetComponent<Piece>().Initialize(pieceStyleNumber, location, originTileLocation, tileLength);
 			pieces.Add(piece);
 		}
 	}

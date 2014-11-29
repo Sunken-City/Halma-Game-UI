@@ -20,6 +20,8 @@ public class GameController : MonoBehaviour
 		{
 			player1URLText = PlayerPrefs.GetString ("Player1URL");
 			player2URLText = PlayerPrefs.GetString ("Player2URL");
+			int player1PieceStyle = PlayerPrefs.GetInt ("Player1Piece");
+			int player2PieceStyle = PlayerPrefs.GetInt ("Player2Piece");
 			
 			InitializeStartingPositions ();
 			board = Instantiate (Board, Vector3.zero, Quaternion.identity) as Transform;
@@ -31,11 +33,11 @@ public class GameController : MonoBehaviour
 
 			Transform player = Instantiate (Player1, Vector3.zero, Quaternion.identity) as Transform; 
 			player1 = player.GetComponent<Player> ();
-			player1.Initialize (player1Start, originTileLocation, tileLength);
+			player1.Initialize (player1PieceStyle, player1Start, originTileLocation, tileLength);
 			
 			player = Instantiate (Player2, Vector3.zero, Quaternion.identity) as Transform; 
 			player2 = player.GetComponent<Player> ();	
-			player2.Initialize (player2Start, originTileLocation, tileLength);
+			player2.Initialize (player2PieceStyle, player2Start, originTileLocation, tileLength);
 
 		}
 	

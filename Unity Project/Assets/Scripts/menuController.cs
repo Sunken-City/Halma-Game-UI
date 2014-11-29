@@ -9,8 +9,9 @@ public class menuController : MonoBehaviour {
 	public GameObject player2Name;
 	public GameObject player1URL;
 	public GameObject player2URL;
-	public GameObject player1Piece;
-	public GameObject player2Piece;
+	
+	private int player1Piece;
+	private int player2Piece;
 	// Use this for initialization
 	void Start () {
 		this.GetComponent<AudioSource>().Play();
@@ -19,6 +20,16 @@ public class menuController : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 	
+	}
+	
+	public void updateP1Piece(int pieceNumber)
+	{
+		player1Piece = pieceNumber;
+	}
+	
+	public void updateP2Piece(int pieceNumber)
+	{
+		player2Piece = pieceNumber;
 	}
 	
 	public void saveInfo()
@@ -37,6 +48,8 @@ public class menuController : MonoBehaviour {
 			PlayerPrefs.SetString ("Player2Name", player2Name.GetComponent<Text>().text);
 			PlayerPrefs.SetString ("Player1URL", player1URL.GetComponent<Text>().text);
 			PlayerPrefs.SetString ("Player2URL", player2URL.GetComponent<Text>().text);
+			PlayerPrefs.SetInt ("Player1Piece", player1Piece);
+			PlayerPrefs.SetInt ("Player2Piece", player2Piece);
 			Application.LoadLevel ("gameScene");
 		}
 	}
