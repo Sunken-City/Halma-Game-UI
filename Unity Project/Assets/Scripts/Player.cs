@@ -6,6 +6,7 @@ public class Player : MonoBehaviour {
 	public Transform Piece;
 	
 	private ArrayList pieces;
+	private ArrayList destinations;
 	private ArrayList piecesX = new ArrayList();
 	private ArrayList piecesY = new ArrayList();
 	// Use this for initialization
@@ -14,8 +15,9 @@ public class Player : MonoBehaviour {
 	}
 
 	// Use this to pass parameters to the player entity
-	public void Initialize(int pieceStyleNumber, ArrayList startingLocations, Vector3 originTileLocation, float tileLength) {
+	public void Initialize(int pieceStyleNumber, ArrayList startingLocations, ArrayList destinations, Vector3 originTileLocation, float tileLength) {
 		pieces = new ArrayList();
+		this.destinations = destinations;
 
 		foreach (Vector2 location in startingLocations) {
 			Transform piece = Instantiate(Piece, Vector3.zero, Quaternion.identity) as Transform; 
@@ -23,11 +25,24 @@ public class Player : MonoBehaviour {
 			pieces.Add(piece);
 		}
 	}
+	
+	public void arrayListToJSON(ArrayList serializable)
+	{
+		JSONObject locationJSON = new JSONObject(JSONObject.Type.ARRAY);
+		foreach (Vector2 location in serializable)
+		{
+			JSONObject xyJSON = new JSONObject(JSONObject.Type.OBJECT);
+			xyJSON.AddField("x", location.x);
+			xyJSON.AddField("y", location.y);
+			locationJSON.Add(xyJSON);
+		}
+		Debug.Log(locationJSON.print());
+	}
 
-	public void getMove(ArrayList enemyPieces) {
+	public void getMove(ArrayList enemyPieces, ArrayList enemyDestinations) {
 		//Hector, now is your time to shine!
 		//Go ahead and use the collection of pieces in the arrayList pieces to make the request with.
-		
+		arrayListToJSON(enemyDestinations);
 		//Once you have the piece selected and the places it needs to go, you can pass them in here.
 	}
 

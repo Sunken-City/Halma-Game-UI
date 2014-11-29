@@ -12,6 +12,8 @@ public class GameController : MonoBehaviour
 		private Player player2;
 		private ArrayList player1Start;
 		private ArrayList player2Start;
+		private ArrayList player1End;
+		private ArrayList player2End;
 		private string player1URLText;
 		private string player2URLText;
 
@@ -33,11 +35,11 @@ public class GameController : MonoBehaviour
 
 			Transform player = Instantiate (Player1, Vector3.zero, Quaternion.identity) as Transform; 
 			player1 = player.GetComponent<Player> ();
-			player1.Initialize (player1PieceStyle, player1Start, originTileLocation, tileLength);
+			player1.Initialize (player1PieceStyle, player1Start, player1End, originTileLocation, tileLength);
 			
 			player = Instantiate (Player2, Vector3.zero, Quaternion.identity) as Transform; 
 			player2 = player.GetComponent<Player> ();	
-			player2.Initialize (player2PieceStyle, player2Start, originTileLocation, tileLength);
+			player2.Initialize (player2PieceStyle, player2Start, player2End, originTileLocation, tileLength);
 
 		}
 	
@@ -49,7 +51,7 @@ public class GameController : MonoBehaviour
 
 		public void takeTurn()
 		{
-			player1.getMove(player2.getPieces());
+			player1.getMove(player2.getPieces(), player2End);
 		}
 		
 		void InitializeStartingPositions ()
@@ -75,5 +77,27 @@ public class GameController : MonoBehaviour
 				player2Start.Add (new Vector2 (15, 17));
 				player2Start.Add (new Vector2 (16, 17));
 				player2Start.Add (new Vector2 (17, 17));
+				
+				player1End = new ArrayList ();
+				player1End.Add (new Vector2 (15, 0));
+				player1End.Add (new Vector2 (16, 0));
+				player1End.Add (new Vector2 (17, 0));
+				player1End.Add (new Vector2 (15, 1));
+				player1End.Add (new Vector2 (16, 1));
+				player1End.Add (new Vector2 (17, 1));
+				player1End.Add (new Vector2 (15, 2));
+				player1End.Add (new Vector2 (16, 2));
+				player1End.Add (new Vector2 (17, 2));
+		
+				player2End = new ArrayList ();
+				player2End.Add (new Vector2 (0, 0));
+				player2End.Add (new Vector2 (1, 0));
+				player2End.Add (new Vector2 (2, 0));
+				player2End.Add (new Vector2 (0, 1));
+				player2End.Add (new Vector2 (1, 1));
+				player2End.Add (new Vector2 (2, 1));
+				player2End.Add (new Vector2 (0, 2));
+				player2End.Add (new Vector2 (1, 2));
+				player2End.Add (new Vector2 (2, 2));
 		}
 }
