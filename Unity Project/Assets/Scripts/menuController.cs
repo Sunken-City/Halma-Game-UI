@@ -9,6 +9,8 @@ public class menuController : MonoBehaviour {
 	public GameObject player2Name;
 	public GameObject player1URL;
 	public GameObject player2URL;
+	public GameObject player1Piece;
+	public GameObject player2Piece;
 	// Use this for initialization
 	void Start () {
 		this.GetComponent<AudioSource>().Play();
