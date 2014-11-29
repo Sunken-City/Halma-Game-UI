@@ -32,13 +32,9 @@ public class menuController : MonoBehaviour {
 		else 
 		{
 			PlayerPrefs.SetString ("Player1Name", player1Name.GetComponent<Text>().text);
-			Debug.Log(PlayerPrefs.GetString ("Player1Name"));
-			PlayerPrefs.SetString ("player2Name", player2Name.GetComponent<Text>().text);
-			Debug.Log(PlayerPrefs.GetString ("player2Name"));
-			PlayerPrefs.SetString ("player1URL", player1URL.GetComponent<Text>().text);
-			Debug.Log(PlayerPrefs.GetString ("player1URL"));
-			PlayerPrefs.SetString ("player2URL", player2URL.GetComponent<Text>().text);
-			Debug.Log(PlayerPrefs.GetString ("player2URL"));
+			PlayerPrefs.SetString ("Player2Name", player2Name.GetComponent<Text>().text);
+			PlayerPrefs.SetString ("Player1URL", player1URL.GetComponent<Text>().text);
+			PlayerPrefs.SetString ("Player2URL", player2URL.GetComponent<Text>().text);
 			Application.LoadLevel ("gameScene");
 		}
 	}

@@ -12,25 +12,30 @@ public class GameController : MonoBehaviour
 		private Player player2;
 		private ArrayList player1Start;
 		private ArrayList player2Start;
+		private string player1URLText;
+		private string player2URLText;
 
 		// Use this for initialization
 		void Start ()
 		{
-				InitializeStartingPositions ();
-				board = Instantiate (Board, Vector3.zero, Quaternion.identity) as Transform;
-				Board boardScript = board.GetComponent<Board> ();
-				//Run the board's Start method so that we can get the values for the tile's length and the Origin Tile's location
-				boardScript.Start();
-				float tileLength = boardScript.getTileLength ();
-				Vector3 originTileLocation = boardScript.getOriginTile ();
+			player1URLText = PlayerPrefs.GetString ("Player1URL");
+			player2URLText = PlayerPrefs.GetString ("Player2URL");
+			
+			InitializeStartingPositions ();
+			board = Instantiate (Board, Vector3.zero, Quaternion.identity) as Transform;
+			Board boardScript = board.GetComponent<Board> ();
+			//Run the board's Start method so that we can get the values for the tile's length and the Origin Tile's location
+			boardScript.Start();
+			float tileLength = boardScript.getTileLength ();
+			Vector3 originTileLocation = boardScript.getOriginTile ();
 
-				Transform player = Instantiate (Player1, Vector3.zero, Quaternion.identity) as Transform; 
-				player1 = player.GetComponent<Player> ();
-				player1.Initialize (player1Start, originTileLocation, tileLength);
-				
-				player = Instantiate (Player2, Vector3.zero, Quaternion.identity) as Transform; 
-				player2 = player.GetComponent<Player> ();	
-				player2.Initialize (player2Start, originTileLocation, tileLength);
+			Transform player = Instantiate (Player1, Vector3.zero, Quaternion.identity) as Transform; 
+			player1 = player.GetComponent<Player> ();
+			player1.Initialize (player1Start, originTileLocation, tileLength);
+			
+			player = Instantiate (Player2, Vector3.zero, Quaternion.identity) as Transform; 
+			player2 = player.GetComponent<Player> ();	
+			player2.Initialize (player2Start, originTileLocation, tileLength);
 
 		}
 	

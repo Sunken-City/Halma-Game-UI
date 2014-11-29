@@ -14,25 +14,37 @@ Platform assembly: C:\Users\Pico\Documents\GitHub\Halma-Game-UI\Unity Project\Le
 Loading C:\Users\Pico\Documents\GitHub\Halma-Game-UI\Unity Project\Legend of Halma_Data\Managed\Assembly-UnityScript.dll into Unity Child Domain
 Platform assembly: C:\Users\Pico\Documents\GitHub\Halma-Game-UI\Unity Project\Legend of Halma_Data\Managed\UnityEngine.UI.dll (this message is harmless)
 Loading C:\Users\Pico\Documents\GitHub\Halma-Game-UI\Unity Project\Legend of Halma_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
-- Completed reload, in  0.336 seconds
+- Completed reload, in  0.332 seconds
 <RI> Initializing input.
 <RI> Input initialized.
 desktop: 1920x1080 59Hz; virtual: 1920x1080 at 0,0
 Platform assembly: C:\Users\Pico\Documents\GitHub\Halma-Game-UI\Unity Project\Legend of Halma_Data\Managed\System.Core.dll (this message is harmless)
 Platform assembly: C:\Users\Pico\Documents\GitHub\Halma-Game-UI\Unity Project\Legend of Halma_Data\Managed\System.dll (this message is harmless)
-UnloadTime: 0.966067 ms
-Unloading 3 Unused Serialized files (Serialized files now loaded: 0 / Dirty serialized files: 0)
+UnloadTime: 0.718884 ms
+Unloading 4 Unused Serialized files (Serialized files now loaded: 0 / Dirty serialized files: 0)
 
-Unloading 17 unused Assets to reduce memory usage. Loaded Objects now: 295.
-Total: 2.791289 ms (FindLiveObjects: 0.041482 ms CreateObjectMapping: 0.031646 ms MarkObjects: 0.496932 ms  DeleteObjects: 0.743260 ms)
+Unloading 17 unused Assets to reduce memory usage. Loaded Objects now: 296.
+Total: 2.787012 ms (FindLiveObjects: 0.070990 ms CreateObjectMapping: 0.052173 ms MarkObjects: 0.473839 ms  DeleteObjects: 0.768064 ms)
 
-Paco the Taco
+Pingas
  
 (Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
 
-UnloadTime: 10.205076 ms
+Big Dicksalot
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+asdf
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+asdfd
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+UnloadTime: 10.093886 ms
 Unloading 3 Unused Serialized files (Serialized files now loaded: 0 / Dirty serialized files: 0)
 
-Unloading 4 unused Assets to reduce memory usage. Loaded Objects now: 230.
-Total: 2.224221 ms (FindLiveObjects: 0.036350 ms CreateObjectMapping: 0.023093 ms MarkObjects: 0.303633 ms  DeleteObjects: 0.539270 ms)
+Unloading 4 unused Assets to reduce memory usage. Loaded Objects now: 252.
+Total: 8.047997 ms (FindLiveObjects: 0.040199 ms CreateObjectMapping: 0.024376 ms MarkObjects: 0.370774 ms  DeleteObjects: 6.210372 ms)
 
