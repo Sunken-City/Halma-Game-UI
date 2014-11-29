@@ -1,6 +1,11 @@
 ﻿<Properties>
+<<<<<<< HEAD
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\Piece.cs">
+=======
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
+    <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\Piece.cs">
+>>>>>>> d8c4f10b0e639daf63b21db6f44279fc454886ac
     <Files>
       <File FileName="Assets\Scripts\GameController.cs" Line="40" Column="89" />
       <File FileName="Assets\Scripts\Player.cs" Line="30" Column="3" />
