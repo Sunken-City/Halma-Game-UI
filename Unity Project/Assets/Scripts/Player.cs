@@ -9,6 +9,8 @@ public class Player : MonoBehaviour {
 	private ArrayList destinations;
 	private ArrayList piecesX = new ArrayList();
 	private ArrayList piecesY = new ArrayList();
+	private string webServiceURL;
+	
 	// Use this for initialization
 	void Start () {
 		
@@ -26,7 +28,12 @@ public class Player : MonoBehaviour {
 		}
 	}
 	
-	public void arrayListToJSON(ArrayList serializable)
+	public void setURL(string URL)
+	{
+		webServiceURL = URL;
+	}
+	
+	public JSONObject arrayListToJSON(ArrayList serializable)
 	{
 		JSONObject locationJSON = new JSONObject(JSONObject.Type.ARRAY);
 		foreach (Vector2 location in serializable)
@@ -36,14 +43,31 @@ public class Player : MonoBehaviour {
 			xyJSON.AddField("y", location.y);
 			locationJSON.Add(xyJSON);
 		}
-		Debug.Log(locationJSON.print());
+		return locationJSON;
 	}
 
-	public void getMove(ArrayList enemyPieces, ArrayList enemyDestinations) {
-		//Hector, now is your time to shine!
-		//Go ahead and use the collection of pieces in the arrayList pieces to make the request with.
-		arrayListToJSON(enemyDestinations);
-		//Once you have the piece selected and the places it needs to go, you can pass them in here.
+	public JSONObject pieceListToJSON(ArrayList pieces)
+	{
+		JSONObject locationJSON = new JSONObject(JSONObject.Type.ARRAY);
+		foreach (Transform piece in pieces)
+		{
+			Vector2 location = piece.GetComponent<Piece>().getLocation();
+			JSONObject xyJSON = new JSONObject(JSONObject.Type.OBJECT);
+			xyJSON.AddField("x", location.x);
+			xyJSON.AddField("y", location.y);
+			locationJSON.Add(xyJSON);
+		}
+		return locationJSON;
+	}
+	
+	public void getMove(ArrayList enemyPieces, ArrayList enemyDestinations) 
+	{
+		
+		JSONObject playerDestJSON = arrayListToJSON(destinations);
+		JSONObject enemyDestJSON = arrayListToJSON(enemyDestinations);
+		JSONObject playerPieceJSON = pieceListToJSON(pieces);
+		JSONObject enemyPieceJSON = pieceListToJSON(enemyPieces);
+		
 	}
 
 	public ArrayList getPieces() {
