@@ -62,11 +62,12 @@ public class Player : MonoBehaviour {
 	
 	public void getMove(ArrayList enemyPieces, ArrayList enemyDestinations) 
 	{
-		
-		JSONObject playerDestJSON = arrayListToJSON(destinations);
-		JSONObject enemyDestJSON = arrayListToJSON(enemyDestinations);
-		JSONObject playerPieceJSON = pieceListToJSON(pieces);
-		JSONObject enemyPieceJSON = pieceListToJSON(enemyPieces);
+		JSONObject httpRequest = new JSONObject(JSONObject.Type.OBJECT);
+		httpRequest.AddField("boardsize", 18);
+		httpRequest.AddField("pieces", pieceListToJSON(pieces));
+		httpRequest.AddField("destinations", arrayListToJSON(destinations));
+		httpRequest.AddField("enemy", pieceListToJSON(enemyPieces));
+		httpRequest.AddField("enemydestinations", arrayListToJSON(enemyDestinations));
 		
 	}
 
