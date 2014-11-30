@@ -164,6 +164,12 @@ public class Player : MonoBehaviour
         return this.pieces;
     }
 
+	//Getter method for the pieces arrayList.
+	public ArrayList getDestinations()
+	{
+		return this.destinations;
+	}
+
     // Update is called once per frame
     void Update()
     {
@@ -212,4 +218,28 @@ public class Player : MonoBehaviour
         }
         return false;
     }
+
+	public bool allPiecesInDestinations(ArrayList pieces, ArrayList Destinations) 
+	{
+		int size = pieces.Count;
+		ArrayList piecesLocations = new ArrayList ();
+		foreach(Transform piece in pieces){
+			piecesLocations.Add(piece.GetComponent<Piece>().getLocation());
+		}
+		int reachedDestination = 0;
+		bool pieceInDestination;
+		foreach(Vector2 location in destinations) {
+			pieceInDestination =  piecesLocations.Contains(location);
+			if(pieceInDestination == true){
+				reachedDestination++;
+			}
+		}
+		if (reachedDestination == size) {
+			return true;
+		} else {
+			return false;
+		}
+
+	}
+
 }

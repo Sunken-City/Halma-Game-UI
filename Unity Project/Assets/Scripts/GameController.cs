@@ -89,8 +89,16 @@ public class GameController : MonoBehaviour
         {
             player1.getMove(player2.getPieces(), player2End);
             //Wait 1 second. Look up yielding if this looks unfamilliar (It's kinda weird :P)
+			bool winner = player1.allPiecesInDestinations(player1.getPieces(),player1.getDestinations()); 
+			if(winner == true){
+				controlPlayback("Stop");
+			}
             yield return new WaitForSeconds(1);
             player2.getMove(player1.getPieces(), player1End);
+			winner = player2.allPiecesInDestinations(player2.getPieces(),player2.getDestinations());
+			if(winner == true){
+				controlPlayback("Stop");
+			}
             yield return new WaitForSeconds(1);
         }
     }
