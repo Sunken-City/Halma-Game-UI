@@ -32,6 +32,8 @@ public class GameController : MonoBehaviour
 			boardScript.Start();
 			float tileLength = boardScript.getTileLength ();
 			Vector3 originTileLocation = boardScript.getOriginTile ();
+            boardScript.createDestination(player1End, player1PieceStyle);
+            boardScript.createDestination(player2End, player2PieceStyle);
 
 			Transform player = Instantiate (Player1, Vector3.zero, Quaternion.identity) as Transform; 
 			player1 = player.GetComponent<Player> ();

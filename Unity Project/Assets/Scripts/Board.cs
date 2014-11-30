@@ -57,6 +57,14 @@ public class Board : MonoBehaviour
 			return originTilePosition;
 		}
 		
+        public void createDestination(ArrayList destinations, int style)
+        {
+            foreach(Vector2 location in destinations)
+            {
+                squares[(int)location.x, 17-(int)location.y].GetComponent<Tile>().changeColor(style);
+            }
+        }
+
 		// Update is called once per frame
 		void Update ()
 		{

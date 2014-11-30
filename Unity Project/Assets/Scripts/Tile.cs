@@ -3,9 +3,15 @@ using System.Collections;
 
 public class Tile : MonoBehaviour {
 
+    private static Color[] colors = {   new Color(163f / 255f, 73f / 255f, 164f / 255f),
+                                        new Color(237f / 255f, 28f / 255f, 36f / 255f) ,
+                                        new Color(181f / 255f, 230f / 255f, 29f / 255f) ,
+                                        new Color(255f / 255f, 242f / 255f, 0f / 255f) ,
+                                        new Color(255f / 255f, 127f / 255f, 39f / 255f) ,
+                                        new Color(0f / 255f, 162f / 255f, 232f / 255f) };
 	// Use this for initialization
 	void Start () {
-	
+	  
 	}
 	
 	// Update is called once per frame
@@ -13,7 +19,8 @@ public class Tile : MonoBehaviour {
 
 	}
 
-	void OnMouseDown() {
-		this.GetComponent<SpriteRenderer> ().color = Color.red;
-	}
+    public void changeColor(int styleNumber)
+    {
+        this.GetComponent<SpriteRenderer>().color = colors[styleNumber];
+    }
 }
