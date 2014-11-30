@@ -10,8 +10,6 @@ public class Player : MonoBehaviour {
 	
 	private ArrayList pieces;
 	private ArrayList destinations;
-	private ArrayList piecesX = new ArrayList();
-	private ArrayList piecesY = new ArrayList();
 	private string webServiceURL = "http://lyle.smu.edu/~tbgeorge/cse4345/a1/getMove.php";
 	
 	// Use this for initialization
@@ -178,19 +176,12 @@ public class Player : MonoBehaviour {
     }
 
 	bool pieceExists(Vector2 pieceLocation){
-		float x = pieceLocation.x;
-		float y = pieceLocation.y;
-		foreach (Transform piece in pieces) {
-			piecesX.Add(piece.position.x);
-			piecesY.Add(piece.position.y);
-		}
-		bool containsX = piecesX.Contains(x);
-		if (containsX == true) {
-			bool containsY = piecesY.Contains(y);
-			if(containsY == true) {
-				return true;
-			}
-		}
-		return false;
+        foreach (Transform piece in pieces)
+        {
+            Vector2 currentLocation = piece.GetComponent<Piece>().getLocation();
+            if (currentLocation == pieceLocation)
+                return true;
+        }
+        return false;
 	}
 }

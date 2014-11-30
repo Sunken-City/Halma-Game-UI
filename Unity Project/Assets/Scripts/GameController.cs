@@ -16,6 +16,7 @@ public class GameController : MonoBehaviour
 		private ArrayList player2End;
 		private string player1URLText;
 		private string player2URLText;
+        private bool play = false;
 
 		// Use this for initialization
 		void Start ()
@@ -50,13 +51,29 @@ public class GameController : MonoBehaviour
 		// Update is called once per frame
 		void Update ()
 		{
-			
+            
 		}
-
-		public void takeTurn()
+        
+        public void controlPlayback(string action)
+        {
+            if (action == "Play")
+            {
+                play = true;
+                StartCoroutine(takeTurn());
+            }
+            else if (action == "Stop")
+                play = false;
+        }
+        
+		IEnumerator takeTurn()
 		{
-			player1.getMove(player2.getPieces(), player2End);
-            player2.getMove(player1.getPieces(), player1End);
+            while (play)
+            {
+                player1.getMove(player2.getPieces(), player2End);
+                yield return new WaitForSeconds(1);
+                player2.getMove(player1.getPieces(), player1End);
+                yield return new WaitForSeconds(1);
+            }
 		}
 		
 		void InitializeStartingPositions ()
