@@ -12,7 +12,7 @@ public class Player : MonoBehaviour {
 	private ArrayList destinations;
 	private ArrayList piecesX = new ArrayList();
 	private ArrayList piecesY = new ArrayList();
-	private string webServiceURL = "http://lyle.smu.edu/~acloudy/cgi-bin/halmaTeamAI.py";
+	private string webServiceURL = "http://lyle.smu.edu/~tbgeorge/cse4345/a1/getMove.php";
 	
 	// Use this for initialization
 	void Start () {
