@@ -79,6 +79,7 @@ public class Player : MonoBehaviour {
 
         Debug.Log(httpRequestJSONWrapper.print());
 
+        //This is the part that has problems and gets us the 500
 		string responseText = WebRequestinJson(webServiceURL, httpRequestJSONWrapper.print());
 		
 		Debug.Log (responseText);
