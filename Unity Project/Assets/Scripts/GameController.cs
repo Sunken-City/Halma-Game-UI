@@ -36,10 +36,12 @@ public class GameController : MonoBehaviour
 			Transform player = Instantiate (Player1, Vector3.zero, Quaternion.identity) as Transform; 
 			player1 = player.GetComponent<Player> ();
 			player1.Initialize (player1PieceStyle, player1Start, player1End, originTileLocation, tileLength);
+			player1.setURL(player1URLText);
 			
 			player = Instantiate (Player2, Vector3.zero, Quaternion.identity) as Transform; 
 			player2 = player.GetComponent<Player> ();	
 			player2.Initialize (player2PieceStyle, player2Start, player2End, originTileLocation, tileLength);
+			player2.setURL(player2URLText);
 
 		}
 	

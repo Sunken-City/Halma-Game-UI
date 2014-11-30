@@ -1,6 +1,8 @@
 ﻿using UnityEngine;
 using System.Collections;
 using System;
+using System.Net;
+using System.IO;
 
 public class Player : MonoBehaviour {
 
@@ -10,7 +12,7 @@ public class Player : MonoBehaviour {
 	private ArrayList destinations;
 	private ArrayList piecesX = new ArrayList();
 	private ArrayList piecesY = new ArrayList();
-	private string webServiceURL = "http://lyle.smu.edu/~tbgeorge/cse4345/a1/getMove.php";
+	private string webServiceURL = "http://lyle.smu.edu/~acloudy/cgi-bin/halmaTeamAI.py";
 	
 	// Use this for initialization
 	void Start () {
@@ -70,20 +72,41 @@ public class Player : MonoBehaviour {
 		httpRequestJSON.AddField("enemy", pieceListToJSON(enemyPieces));
 		httpRequestJSON.AddField("enemydestinations", arrayListToJSON(enemyDestinations));
 		
-		WWWForm postData = new WWWForm();
-		postData.AddField("board", httpRequestJSON.print());
+		string responseText = WebRequestinJson(webServiceURL, httpRequestJSON.print ());
 		
-		sendWebRequest(postData);
+		Debug.Log (responseText);
 	}
 	
-	IEnumerator sendWebRequest(WWWForm postData)
+	//Code taken from this SO question: http://stackoverflow.com/questions/4982765/json-call-with-c-sharp
+	public string WebRequestinJson(string url, string postData)
 	{
-		WWW webRequest = new WWW(webServiceURL, postData);
-		yield return webRequest;
-		if (!String.IsNullOrEmpty(webRequest.error))
-			Debug.Log(webRequest.error);
-		else
-			Debug.Log (webRequest.text);
+		string responseJSON = string.Empty;
+		
+		StreamWriter requestWriter;
+		
+		Debug.Log(url);
+		
+		var webRequest = System.Net.WebRequest.Create(url) as HttpWebRequest;
+		if (webRequest != null)
+		{
+			webRequest.Method = "POST";
+			//webRequest.ServicePoint.Expect100Continue = false;
+			webRequest.Timeout = 20000;
+			
+			webRequest.ContentType = "application/json";
+			//POST the data.
+			using (requestWriter = new StreamWriter(webRequest.GetRequestStream()))
+			{
+				requestWriter.Write(postData);
+			}
+		}
+		
+		HttpWebResponse resp = (HttpWebResponse)webRequest.GetResponse();
+		Stream resStream = resp.GetResponseStream();
+		StreamReader reader = new StreamReader(resStream);
+		responseJSON = reader.ReadToEnd();
+		
+		return responseJSON;
 	}
 
 	public ArrayList getPieces() {
