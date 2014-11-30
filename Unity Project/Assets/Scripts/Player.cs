@@ -67,34 +67,33 @@ public class Player : MonoBehaviour {
 	
 	public void getMove(ArrayList enemyPieces, ArrayList enemyDestinations) 
 	{
-		JSONObject httpRequestJSON = new JSONObject(JSONObject.Type.OBJECT);
-		httpRequestJSON.AddField("boardsize", 18);
-		httpRequestJSON.AddField("pieces", pieceListToJSON(pieces));
-		httpRequestJSON.AddField("destinations", arrayListToJSON(destinations));
-		httpRequestJSON.AddField("enemy", pieceListToJSON(enemyPieces));
-		httpRequestJSON.AddField("enemydestinations", arrayListToJSON(enemyDestinations));
+		JSONObject json = new JSONObject(JSONObject.Type.OBJECT);
+		json.AddField("boardSize", 18);
+		json.AddField("pieces", pieceListToJSON(pieces));
+		json.AddField("destinations", arrayListToJSON(destinations));
+		json.AddField("enemy", pieceListToJSON(enemyPieces));
+		json.AddField("enemydestinations", arrayListToJSON(enemyDestinations));
 
-        JSONObject httpRequestJSONWrapper = new JSONObject(JSONObject.Type.OBJECT);
-        httpRequestJSONWrapper.AddField("board", httpRequestJSON);
-
-        Debug.Log(httpRequestJSONWrapper.print());
+		Debug.Log("JSON is:");
+        Debug.Log(json.print());
 
         //This is the part that has problems and gets us the 500
-		string responseText = WebRequestinJson(webServiceURL, httpRequestJSONWrapper.print());
+		string responseText = WebRequestinJson(json.print());
 		
-		Debug.Log (responseText);
+		Debug.Log("Response is:");
+		Debug.Log(responseText);
 	}
 	
 	//Code taken from this SO question: http://stackoverflow.com/questions/4982765/json-call-with-c-sharp
-	public string WebRequestinJson(string url, string postData)
+	public string WebRequestinJson(string postData)
 	{
+		Debug.Log("URL is:");
+		Debug.Log(webServiceURL);
 		string responseJSON = string.Empty;
 		
 		StreamWriter requestWriter;
 		
-		Debug.Log(url);
-		
-		var webRequest = System.Net.WebRequest.Create(url) as HttpWebRequest;
+		var webRequest = System.Net.WebRequest.Create(webServiceURL) as HttpWebRequest;
 		if (webRequest != null)
 		{
 			webRequest.Method = "POST";
