@@ -176,6 +176,7 @@ public class Player : MonoBehaviour {
         }
         return null;
     }
+
 	bool pieceExists(Vector2 pieceLocation){
 		float x = pieceLocation.x;
 		float y = pieceLocation.y;

@@ -45,7 +45,8 @@ public class Piece : MonoBehaviour {
 
 	public void move(Vector2 placeToMove)
     {
-		this.transform.position = calcPos(originPosition, placeToMove, tileLength);		
+		this.transform.position = calcPos(originPosition, placeToMove, tileLength);
+        this.boardPosition = placeToMove;
 	}
 	
 }
