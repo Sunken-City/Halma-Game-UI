@@ -82,8 +82,16 @@ public class Player : MonoBehaviour {
 		
 		Debug.Log("Response is:");
 		Debug.Log(responseText);
-	}
+    }
 	
+    void makeMove(string JSONResponse)
+    {
+        JSONObject response = new JSONObject(JSONResponse);
+        JSONObject from = response["from"];
+        JSONObject to = response["to"];
+        Vector2 pieceToMove = new Vector2(Single.Parse(from["x"].ToString()), Single.Parse(from["y"].ToString()));
+    }
+
 	//Code taken from this SO question: http://stackoverflow.com/questions/4982765/json-call-with-c-sharp
 	public string WebRequestinJson(string postData)
 	{
