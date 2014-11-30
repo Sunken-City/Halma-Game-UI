@@ -34,18 +34,22 @@ public class menuController : MonoBehaviour {
 	
 	public void saveInfo()
 	{
-        string player1NameText = player1Name.GetComponent<Text>().text;
-        string player2NameText = player2Name.GetComponent<Text>().text;
+        string player1NameText = player1Name.GetComponent<InputField>().text;
+        string player2NameText = player2Name.GetComponent<InputField>().text;
         string player1URLText = player1URL.GetComponent<InputField>().text;
         string player2URLText = player2URL.GetComponent<InputField>().text;
-		if (player1NameText == "" || player2NameText == "" || player1URLText == "" || player2URLText == "")
-		{
-			return;
-		}
+		if (player1NameText == "")
+			player1Name.GetComponent<Image>().color = Color.red;
+        else if (player2NameText == "")
+            player2Name.GetComponent<Image>().color = Color.red;
+        else if (player1URLText == "")
+            player1URL.GetComponent<Image>().color = Color.red;
+        else if (player2URLText == "")
+            player2URL.GetComponent<Image>().color = Color.red;
 		else 
 		{
-            PlayerPrefs.SetString("Player1Name", player1Name.GetComponent<Text>().text);
-            PlayerPrefs.SetString("Player2Name", player2Name.GetComponent<Text>().text);
+            PlayerPrefs.SetString("Player1Name", player1Name.GetComponent<InputField>().text);
+            PlayerPrefs.SetString("Player2Name", player2Name.GetComponent<InputField>().text);
 			PlayerPrefs.SetString ("Player1URL", player1URL.GetComponent<InputField>().text);
             PlayerPrefs.SetString("Player2URL", player2URL.GetComponent<InputField>().text);
 			PlayerPrefs.SetInt ("Player1Piece", player1Piece);
