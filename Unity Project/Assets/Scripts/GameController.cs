@@ -56,6 +56,7 @@ public class GameController : MonoBehaviour
 		public void takeTurn()
 		{
 			player1.getMove(player2.getPieces(), player2End);
+            player2.getMove(player1.getPieces(), player1End);
 		}
 		
 		void InitializeStartingPositions ()

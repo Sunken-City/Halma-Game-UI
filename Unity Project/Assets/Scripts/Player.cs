@@ -74,14 +74,11 @@ public class Player : MonoBehaviour {
 		json.AddField("enemy", pieceListToJSON(enemyPieces));
 		json.AddField("enemydestinations", arrayListToJSON(enemyDestinations));
 
-		Debug.Log("JSON is:");
-        Debug.Log(json.print());
-
-        //This is the part that has problems and gets us the 500
 		string responseText = WebRequestinJson(json.print());
 		
 		Debug.Log("Response is:");
 		Debug.Log(responseText);
+        makeMove(responseText);
     }
 	
     void makeMove(string JSONResponse)
@@ -90,6 +87,27 @@ public class Player : MonoBehaviour {
         JSONObject from = response["from"];
         JSONObject to = response["to"];
         Vector2 pieceToMove = new Vector2(Single.Parse(from["x"].ToString()), Single.Parse(from["y"].ToString()));
+        Transform piece = findPieceOnBoard(pieceToMove);
+        if (piece != null)
+        {
+            if (to.IsArray)
+            {
+                foreach (JSONObject jump in to.list)
+                {
+                    Vector2 placeToMove = new Vector2(Single.Parse(jump["x"].ToString()), Single.Parse(jump["y"].ToString()));
+                    piece.GetComponent<Piece>().move(placeToMove);
+                }
+            }
+            else
+            {
+                Vector2 placeToMove = new Vector2(Single.Parse(to["x"].ToString()), Single.Parse(to["y"].ToString()));
+                piece.GetComponent<Piece>().move(placeToMove);
+            }
+        }
+        else //The piece didn't exist, invalid move. Do some error handling here
+        {
+            return;
+        }
     }
 
 	//Code taken from this SO question: http://stackoverflow.com/questions/4982765/json-call-with-c-sharp
@@ -148,6 +166,16 @@ public class Player : MonoBehaviour {
 		return true;
 	}
 
+    Transform findPieceOnBoard(Vector2 pieceLocation)
+    {
+        foreach (Transform piece in pieces)
+        {
+            Vector2 currentLocation = piece.GetComponent<Piece>().getLocation();
+            if (currentLocation == pieceLocation)
+                return piece;
+        }
+        return null;
+    }
 	bool pieceExists(Vector2 pieceLocation){
 		float x = pieceLocation.x;
 		float y = pieceLocation.y;
