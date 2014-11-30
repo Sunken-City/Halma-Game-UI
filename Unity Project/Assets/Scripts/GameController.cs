@@ -24,6 +24,9 @@ public class GameController : MonoBehaviour
     // Use this for initialization
     void Start()
     {
+        //Play the background music first.
+        this.GetComponent<AudioSource>().Play();
+
         //Grab the URL and Piece style from the PlayerPrefs. 
         //We're allowed to make the assumption that data is there because a user cannot 
         //Change scenes manually.
