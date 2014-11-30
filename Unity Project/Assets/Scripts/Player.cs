@@ -43,7 +43,8 @@ public class Player : MonoBehaviour {
 		{
 			JSONObject xyJSON = new JSONObject(JSONObject.Type.OBJECT);
 			xyJSON.AddField("x", location.x);
-			xyJSON.AddField("y", location.y);
+            xyJSON.AddField("y", location.y);
+            xyJSON.AddField("team", 0);
 			locationJSON.Add(xyJSON);
 		}
 		return locationJSON;
@@ -57,7 +58,8 @@ public class Player : MonoBehaviour {
 			Vector2 location = piece.GetComponent<Piece>().getLocation();
 			JSONObject xyJSON = new JSONObject(JSONObject.Type.OBJECT);
 			xyJSON.AddField("x", location.x);
-			xyJSON.AddField("y", location.y);
+            xyJSON.AddField("y", location.y);
+            xyJSON.AddField("team", 0);
 			locationJSON.Add(xyJSON);
 		}
 		return locationJSON;
@@ -71,8 +73,13 @@ public class Player : MonoBehaviour {
 		httpRequestJSON.AddField("destinations", arrayListToJSON(destinations));
 		httpRequestJSON.AddField("enemy", pieceListToJSON(enemyPieces));
 		httpRequestJSON.AddField("enemydestinations", arrayListToJSON(enemyDestinations));
-		
-		string responseText = WebRequestinJson(webServiceURL, httpRequestJSON.print ());
+
+        JSONObject httpRequestJSONWrapper = new JSONObject(JSONObject.Type.OBJECT);
+        httpRequestJSONWrapper.AddField("board", httpRequestJSON);
+
+        Debug.Log(httpRequestJSONWrapper.print());
+
+		string responseText = WebRequestinJson(webServiceURL, httpRequestJSONWrapper.print());
 		
 		Debug.Log (responseText);
 	}
