@@ -79,7 +79,17 @@ public class GameController : MonoBehaviour
             StartCoroutine(takeTurn());
         }
         else if (action == "Stop")
+		{
             play = false;
+		}
+		else if (action == "PlayAgain")
+		{
+			Application.LoadLevel("gameScene");
+		}
+		else if (action == "ReturntoTitle")
+		{
+			Application.LoadLevel("titleScreen");
+		}
     }
 
     //If we want anything that waits, we have to make the function return an IEnumerator.

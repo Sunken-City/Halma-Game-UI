@@ -1,7 +1,10 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.UI;
 
 public class winnerScreen : MonoBehaviour {
+	
+	public GameObject playerName;
 
 	// Use this for initialization
 	void Start () {
@@ -12,4 +15,15 @@ public class winnerScreen : MonoBehaviour {
 	void Update () {
 	
 	}
+
+	public void setWinnerName(int playerNumber){
+		if (playerNumber == 1) {
+			playerName.GetComponent<Text> ().text = PlayerPrefs.GetString ("Player1Name");
+		} else if (playerNumber == 2) {
+			playerName.GetComponent<Text> ().text = PlayerPrefs.GetString ("Player2Name");
+		} else {
+			playerName.GetComponent<Text> ().text = "Tie";
+		}
+	}
+
 }
