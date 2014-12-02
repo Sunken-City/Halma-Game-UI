@@ -8,6 +8,8 @@ public class winnerScreen : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
+		//Play the background music first.
+		this.GetComponent<AudioSource>().Play();
 		setWinnerName ();
 	}
 	
