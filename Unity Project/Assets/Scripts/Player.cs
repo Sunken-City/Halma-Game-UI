@@ -144,6 +144,7 @@ public class Player : MonoBehaviour
                         }
                         else
                         {
+                            PlayerPrefs.SetString("WinnerPlayerName", opponentName);
                             Application.LoadLevel("winnerScreen");
                             break;
                         }
