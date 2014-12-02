@@ -8,7 +8,7 @@ public class winnerScreen : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-	
+		setWinnerName ();
 	}
 	
 	// Update is called once per frame
@@ -16,7 +16,7 @@ public class winnerScreen : MonoBehaviour {
 	
 	}
 
-	public void setWinnerName(){
+	public void setWinnerName()
 	{
 			playerName.GetComponent<Text> ().text = PlayerPrefs.GetString ("WinnerPlayerName");
 	}
