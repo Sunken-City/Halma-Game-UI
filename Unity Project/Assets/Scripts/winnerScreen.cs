@@ -26,4 +26,16 @@ public class winnerScreen : MonoBehaviour {
 		}
 	}
 
+	public void playAgainOrTitleScreen(string action)
+	{
+		if (action == "PlayAgain")
+		{
+			Application.LoadLevel("gameScene");
+		}
+		else if (action == "TitleScreen")
+		{
+			Application.LoadLevel("titleScreen");
+		}
+	}
+
 }
