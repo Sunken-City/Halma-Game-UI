@@ -11,6 +11,7 @@ public class winnerScreen : MonoBehaviour {
 		//Play the background music first.
 		this.GetComponent<AudioSource>().Play();
 		setWinnerName ();
+        this.GetComponent<AudioSource>().Play();
 	}
 	
 	// Update is called once per frame
