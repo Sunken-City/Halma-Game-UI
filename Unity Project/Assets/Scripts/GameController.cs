@@ -56,11 +56,15 @@ public class GameController : MonoBehaviour
         player1 = player.GetComponent<Player>();
         player1.Initialize(player1PieceStyle, player1Start, player1End, originTileLocation, tileLength);
         player1.setURL(player1URLText);
+        player1.setPlayerName(PlayerPrefs.GetString ("Player1Name"));
+        player1.setOpponentName(PlayerPrefs.GetString ("Player2Name"));
 
         player = Instantiate(Player2, Vector3.zero, Quaternion.identity) as Transform;
         player2 = player.GetComponent<Player>();
         player2.Initialize(player2PieceStyle, player2Start, player2End, originTileLocation, tileLength);
         player2.setURL(player2URLText);
+        player2.setPlayerName(PlayerPrefs.GetString ("Player2Name"));
+        player2.setOpponentName(PlayerPrefs.GetString ("Player1Name"));
 
     }
 
@@ -89,12 +93,13 @@ public class GameController : MonoBehaviour
     {
         while (play)
         {
-            player1.getMove(player2.getPieces(), player2End);
+            player1.getMove(player2.getPieces(),player2End);
             //Wait 1 second. Look up yielding if this looks unfamilliar (It's kinda weird :P)
 			bool winner = player1.allPiecesInDestinations(player1.getPieces(),player1.getDestinations()); 
 			if(winner == true){
 				Debug.Log("Winner Player1");
 				controlPlayback("Stop");
+				PlayerPrefs.SetString("WinnerPlayerName", PlayerPrefs.GetString ("Player1Name"));
 				Application.LoadLevel("winnerScreen");
 			}
             yield return new WaitForSeconds(.1f);
@@ -103,6 +108,7 @@ public class GameController : MonoBehaviour
 			if(winner == true){
 				Debug.Log("Winner Player2");
 				controlPlayback("Stop");
+				PlayerPrefs.SetString("WinnerPlayerName", PlayerPrefs.GetString ("Player2Name"));
 				Application.LoadLevel("winnerScreen");
 			}
             yield return new WaitForSeconds(.1f);
