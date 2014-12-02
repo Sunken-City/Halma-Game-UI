@@ -97,7 +97,7 @@ public class GameController : MonoBehaviour
 				controlPlayback("Stop");
 				Application.LoadLevel("winnerScreen");
 			}
-            yield return new WaitForSeconds(1);
+            yield return new WaitForSeconds(.1f);
             player2.getMove(player1.getPieces(), player1End);
 			winner = player2.allPiecesInDestinations(player2.getPieces(),player2.getDestinations());
 			if(winner == true){
@@ -105,7 +105,7 @@ public class GameController : MonoBehaviour
 				controlPlayback("Stop");
 				Application.LoadLevel("winnerScreen");
 			}
-            yield return new WaitForSeconds(1);
+            yield return new WaitForSeconds(.1f);
         }
     }
 
