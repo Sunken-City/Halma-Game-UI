@@ -11,7 +11,9 @@ public class Player : MonoBehaviour
 
     private ArrayList pieces;
     private ArrayList destinations;
-    private string webServiceURL = "http://lyle.smu.edu/~tbgeorge/cse4345/a1/getMove.php";
+    private ArrayList opponentPieces;
+    private int invalidMoves = 0;
+    private string webServiceURL = "http://lyle.smu.edu/~hcuriazuara/4345/A1/getMove.php";
 
     // Use this for initialization
     void Start()
@@ -74,6 +76,7 @@ public class Player : MonoBehaviour
     //Given the enemy's position and destinations, determine which piece to move and where.
     public void getMove(ArrayList enemyPieces, ArrayList enemyDestinations)
     {
+        opponentPieces = enemyPieces;
         //Encode the state of the game in JSON.
         JSONObject json = new JSONObject(JSONObject.Type.OBJECT);
         json.AddField("boardSize", 18);
@@ -85,8 +88,8 @@ public class Player : MonoBehaviour
         //Send the web request and get back the response.
         string responseText = WebRequestinJson(json.print());
 
-        Debug.Log("Response is:");
-        Debug.Log(responseText);
+        //Debug.Log("Response is:");
+        //Debug.Log(responseText);
 
         //With the move information available., make the move.
         makeMove(responseText);
@@ -111,7 +114,26 @@ public class Player : MonoBehaviour
                 {
                     Vector2 placeToMove = new Vector2(Single.Parse(jump["x"].ToString()), Single.Parse(jump["y"].ToString()));
                     //Make the move given the actual place to move.
-                    piece.GetComponent<Piece>().move(placeToMove);
+                    if (moveIsValid(placeToMove))
+                    {
+                        piece.GetComponent<Piece>().move(placeToMove);
+                        invalidMoves = 0;
+                    }
+                    else
+                    {
+                        if (invalidMoves < 4)
+                        {
+                            ++invalidMoves;
+                            // Debug.Log(invalidMoves);
+                            break;
+                        }
+                        else
+                        {
+                            Application.LoadLevel("winnerScreen");
+                            break;
+                        }
+                    }
+                    
                 }
             }
             else
@@ -122,15 +144,26 @@ public class Player : MonoBehaviour
         }
         else //The piece didn't exist, invalid move. Do some error handling here
         {
+            ++invalidMoves;
             return;
         }
+    }
+
+    public bool moveIsValid(Vector2 move)
+    {
+        // Debug.Log(move);
+        if(move.x < 0 || move.x > 16 || move.y < 0 || move.y > 16 || pieceExists(move))
+        {
+            return false;
+        }
+        return true;
     }
 
     //Code taken from this SO question: http://stackoverflow.com/questions/4982765/json-call-with-c-sharp
     public string WebRequestinJson(string postData)
     {
-        Debug.Log("URL is:");
-        Debug.Log(webServiceURL);
+        //Debug.Log("URL is:");
+        //Debug.Log(webServiceURL);
         string responseJSON = string.Empty;
 
         StreamWriter requestWriter;
@@ -211,6 +244,12 @@ public class Player : MonoBehaviour
     bool pieceExists(Vector2 pieceLocation)
     {
         foreach (Transform piece in pieces)
+        {
+            Vector2 currentLocation = piece.GetComponent<Piece>().getLocation();
+            if (currentLocation == pieceLocation)
+                return true;
+        }
+        foreach (Transform piece in opponentPieces)
         {
             Vector2 currentLocation = piece.GetComponent<Piece>().getLocation();
             if (currentLocation == pieceLocation)

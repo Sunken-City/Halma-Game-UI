@@ -89,7 +89,7 @@ public class GameController : MonoBehaviour
     {
         while (play)
         {
-            player1.getMove(player2.getPieces(), player2End);
+            player1.getMove(player2.getPieces(),player2End);
             //Wait 1 second. Look up yielding if this looks unfamilliar (It's kinda weird :P)
 			bool winner = player1.allPiecesInDestinations(player1.getPieces(),player1.getDestinations()); 
 			if(winner == true){
