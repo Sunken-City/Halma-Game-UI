@@ -56,11 +56,15 @@ public class GameController : MonoBehaviour
         player1 = player.GetComponent<Player>();
         player1.Initialize(player1PieceStyle, player1Start, player1End, originTileLocation, tileLength);
         player1.setURL(player1URLText);
+        player1.setPlayerName(PlayerPrefs.GetString ("Player1Name"));
+        player1.setOpponentName(PlayerPrefs.GetString ("Player2Name"));
 
         player = Instantiate(Player2, Vector3.zero, Quaternion.identity) as Transform;
         player2 = player.GetComponent<Player>();
         player2.Initialize(player2PieceStyle, player2Start, player2End, originTileLocation, tileLength);
         player2.setURL(player2URLText);
+        player2.setPlayerName(PlayerPrefs.GetString ("Player2Name"));
+        player2.setOpponentName(PlayerPrefs.GetString ("Player1Name"));
 
     }
 

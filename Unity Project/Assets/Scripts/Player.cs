@@ -14,6 +14,8 @@ public class Player : MonoBehaviour
     private ArrayList opponentPieces;
     private int invalidMoves = 0;
     private string webServiceURL = "http://lyle.smu.edu/~hcuriazuara/4345/A1/getMove.php";
+    private string playerName = "defaultName";
+    private string opponentName = "defaultOpponentName";
 
     // Use this for initialization
     void Start()
@@ -40,6 +42,18 @@ public class Player : MonoBehaviour
     public void setURL(string URL)
     {
         webServiceURL = URL;
+    }
+
+    //Setter for the name
+    public void setPlayerName(string name)
+    {
+        playerName = name;
+    }
+
+    //Setter for the opponent name
+    public void setOpponentName(string name)
+    {
+        opponentName = name;
     }
 
     //Helper method that takes an arrayList and converts it to JSON
@@ -98,6 +112,7 @@ public class Player : MonoBehaviour
     //Take a JSONResponse string and parse the move information from it.
     void makeMove(string JSONResponse)
     {
+        // Debug.Log(playerName);
         JSONObject response = new JSONObject(JSONResponse);
         JSONObject from = response["from"];
         JSONObject to = response["to"];
