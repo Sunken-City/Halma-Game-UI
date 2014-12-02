@@ -16,14 +16,9 @@ public class winnerScreen : MonoBehaviour {
 	
 	}
 
-	public void setWinnerName(int playerNumber){
-		if (playerNumber == 1) {
-			playerName.GetComponent<Text> ().text = PlayerPrefs.GetString ("Player1Name");
-		} else if (playerNumber == 2) {
-			playerName.GetComponent<Text> ().text = PlayerPrefs.GetString ("Player2Name");
-		} else {
-			playerName.GetComponent<Text> ().text = "Tie";
-		}
+	public void setWinnerName(){
+	{
+			playerName.GetComponent<Text> ().text = PlayerPrefs.GetString ("WinnerPlayerName");
 	}
 
 	public void playAgainOrTitleScreen(string action)
@@ -32,7 +27,7 @@ public class winnerScreen : MonoBehaviour {
 		{
 			Application.LoadLevel("gameScene");
 		}
-		else if (action == "TitleScreen")
+		else if (action == "ReturnToTitle")
 		{
 			Application.LoadLevel("titleScreen");
 		}

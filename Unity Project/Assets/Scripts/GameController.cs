@@ -95,6 +95,7 @@ public class GameController : MonoBehaviour
 			if(winner == true){
 				Debug.Log("Winner Player1");
 				controlPlayback("Stop");
+				PlayerPrefs.SetString("WinnerPlayerName", PlayerPrefs.GetString ("Player1Name"));
 				Application.LoadLevel("winnerScreen");
 			}
             yield return new WaitForSeconds(.1f);
@@ -103,6 +104,7 @@ public class GameController : MonoBehaviour
 			if(winner == true){
 				Debug.Log("Winner Player2");
 				controlPlayback("Stop");
+				PlayerPrefs.SetString("WinnerPlayerName", PlayerPrefs.GetString ("Player2Name"));
 				Application.LoadLevel("winnerScreen");
 			}
             yield return new WaitForSeconds(.1f);
