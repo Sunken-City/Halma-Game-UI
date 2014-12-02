@@ -121,7 +121,7 @@ public class Player : MonoBehaviour
                     }
                     else
                     {
-                        if (invalidMoves < 2)
+                        if (invalidMoves < 4)
                         {
                             ++invalidMoves;
                             // Debug.Log(invalidMoves);
