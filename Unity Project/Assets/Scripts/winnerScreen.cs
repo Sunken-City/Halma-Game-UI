@@ -16,7 +16,7 @@ public class winnerScreen : MonoBehaviour {
 	
 	}
 
-	public void setWinnerName(){
+	public void setWinnerName()
 	{
 			playerName.GetComponent<Text> ().text = PlayerPrefs.GetString ("WinnerPlayerName");
 	}
